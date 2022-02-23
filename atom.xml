@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://erhuChenChen.github.io</id>
+    <id>http://localhost:4000</id>
     <title>二胡沉沉</title>
-    <updated>2022-02-23T04:30:38.642Z</updated>
+    <updated>2022-02-23T04:55:19.777Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://erhuChenChen.github.io"/>
-    <link rel="self" href="https://erhuChenChen.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>一个名叫二胡沉沉的小助手。&lt;br&gt;</subtitle>
-    <logo>https://erhuChenChen.github.io/images/avatar.png</logo>
-    <icon>https://erhuChenChen.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2022, 二胡沉沉</rights>
     <entry>
         <title type="html"><![CDATA[从零开始Gridea+Github搭建个人博客]]></title>
-        <id>https://erhuChenChen.github.io/post/gridea-github/</id>
-        <link href="https://erhuChenChen.github.io/post/gridea-github/">
+        <id>http://localhost:4000/post/gridea-github/</id>
+        <link href="http://localhost:4000/post/gridea-github/">
         </link>
         <updated>2021-06-22T05:45:22.000Z</updated>
         <content type="html"><![CDATA[<p>👩‍💻要科学上网<br>
@@ -34,27 +34,27 @@
 <li>Skip this step跳过个性化设置（也可以自己随意）</li>
 <li>验证邮箱</li>
 <li>登录成功<br>
-<img src="https://erhuChenChen.github.io/post-images/1624343188872.png" alt="" loading="lazy"><br><br></li>
+<img src="http://localhost:4000/post-images/1624343188872.png" alt="" loading="lazy"><br><br></li>
 </ol>
 <h2 id="github创建仓库"><strong>Github创建仓库</strong></h2>
 <ol>
 <li>点击<strong>Start a Project</strong>按钮创建项目<br>
 2.进行如下操作<br>
-<img src="https://erhuChenChen.github.io/post-images/1624343959030.png" alt="" loading="lazy"><br><br></li>
+<img src="http://localhost:4000/post-images/1624343959030.png" alt="" loading="lazy"><br><br></li>
 </ol>
 <h2 id="github创建令牌"><strong>Github创建令牌</strong></h2>
 <ol>
 <li>点击右上角的头像，在菜单中选择<strong>Setting</strong>（设置）<br>
-<img src="https://erhuChenChen.github.io/post-images/1624344278812.png" alt="" loading="lazy"></li>
+<img src="http://localhost:4000/post-images/1624344278812.png" alt="" loading="lazy"></li>
 <li>将页面下滑，在左侧列表中选择<strong>Developer settings</strong>（开发者设置）<br>
-<img src="https://erhuChenChen.github.io/post-images/1624344552590.png" alt="" loading="lazy"></li>
+<img src="http://localhost:4000/post-images/1624344552590.png" alt="" loading="lazy"></li>
 <li>左侧列表中选择<strong>Personal access tokens</strong>（个人访问令牌）</li>
 <li>按图示操作<br>
-<img src="https://erhuChenChen.github.io/post-images/1624344999477.png" alt="" loading="lazy"></li>
+<img src="http://localhost:4000/post-images/1624344999477.png" alt="" loading="lazy"></li>
 <li>下滑单击<strong>Generate token</strong>（生成令牌）按钮<br>
-<img src="https://erhuChenChen.github.io/post-images/1624345428101.png" alt="" loading="lazy"></li>
+<img src="http://localhost:4000/post-images/1624345428101.png" alt="" loading="lazy"></li>
 <li>保存令牌，<strong>令牌序列只会出现一次，注意复制保存</strong>（若丢失可以重新创建令牌）<br>
-<img src="https://erhuChenChen.github.io/post-images/1624345562610.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1624345562610.png" alt="" loading="lazy"><br>
 <br><br></li>
 </ol>
 <h2 id="配置gridea"><strong>配置Gridea</strong></h2>
@@ -62,9 +62,9 @@
 <li>在<a href="https://gridea.dev/">Gridea官网</a>下载适合自己电脑的版本</li>
 <li>安装成功后启动Gridea（白屏正常现象，耐心等待）</li>
 <li>出现界面后，在左侧列表点击<strong>远程</strong><br>
-<img src="https://erhuChenChen.github.io/post-images/1624346222096.png" alt="" loading="lazy"></li>
+<img src="http://localhost:4000/post-images/1624346222096.png" alt="" loading="lazy"></li>
 <li>按图示操作<br>
-<img src="https://erhuChenChen.github.io/post-images/1624346832753.png" alt="" loading="lazy"></li>
+<img src="http://localhost:4000/post-images/1624346832753.png" alt="" loading="lazy"></li>
 <li>配置完成，可以开始写博客了，通过预览可以查看当前博客的界面效果，左下角小地球图标可以进入自己的实际博客网站查看界面表现。<br>
 <br><br></li>
 </ol>
@@ -77,15 +77,15 @@
 <li>
 <p>同步失败？<br>
 答：可以点击蓝色部分查找解答。<br>
-<img src="https://erhuChenChen.github.io/post-images/1624347414659.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1624347414659.png" alt="" loading="lazy"><br>
 或者点击【编辑】，选择【开发者工具】，查看具体原因。<br>
-<img src="https://erhuChenChen.github.io/post-images/1624347536391.png" alt="" loading="lazy"></p>
+<img src="http://localhost:4000/post-images/1624347536391.png" alt="" loading="lazy"></p>
 </li>
 <li>
 <p>我遇到的问题？</p>
 <ol>
 <li>同步失败<br>
-<img src="https://erhuChenChen.github.io/post-images/1624347641673.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1624347641673.png" alt="" loading="lazy"><br>
 解决方法：<br>
 <a href="https://blog.gd1214b.icu/post/F2_C5EVQh/">解决Gridea同步失败的问题</a></li>
 </ol>
