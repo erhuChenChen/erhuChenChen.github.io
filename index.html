@@ -1,145 +1,123 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>二胡沉沉</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1642144017126">
-<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="shortcut icon" href="https://erhuChenChen.github.io/favicon.ico?v=1645589436510">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://erhuChenChen.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="二胡沉沉 - Atom Feed" href="https://erhuChenChen.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="一个名叫二胡沉沉的小助手。&lt;br&gt;
-分享下一秒就忘记的新知识。">
-    
+    <meta name="description" content="一个名叫二胡沉沉的小助手。<br>" />
   </head>
   <body>
-    <div id="app" class="main">
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://erhuChenChen.github.io">
+  <img class="avatar" src="https://erhuChenChen.github.io/images/avatar.png?v=1645589436510" alt="">
+  </a>
+  <h1 class="site-title">
+    二胡沉沉
+  </h1>
+  <p class="site-description">
+    一个名叫二胡沉沉的小助手。<br>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
 
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="http://localhost:4000">
-        <img src="http://localhost:4000/images/avatar.png?v=1642144017126" class="site-logo">
-        <h1 class="site-title">二胡沉沉</h1>
+    
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://erhuChenChen.github.io/post/gridea-github/">
+        <h2 class="post-title">从零开始Gridea+Github搭建个人博客</h2>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
+      <div class="post-info">
+        <span>
+          2021-06-22
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+          <a href="https://erhuChenChen.github.io/tag/TodIJViI4/" class="post-tag">
+            # 笔记
+          </a>
+        
+          <a href="https://erhuChenChen.github.io/tag/NR9lZYPLU/" class="post-tag">
+            # Gridea
+          </a>
+        
       </div>
-    </div>
-    <div>
       
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
+        <a href="https://erhuChenChen.github.io/post/gridea-github/" class="post-feature-image" style="background-image: url('https://erhuChenChen.github.io/post-images/gridea-github.png')">
+        </a>
       
+      <div class="post-abstract">
         
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      一个名叫二胡沉沉的小助手。<br>
-分享下一秒就忘记的新知识。
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
+      </div>
+    </article>
+  
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://localhost:4000/post/gridea-github/">
-                  <h2 class="post-title">从零开始Gridea+Github搭建个人博客</h2>
-                </a>
-                <div class="post-date">
-                  2021-06-22
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="http://localhost:4000/post/gridea-github/">
-                  <div class="feature-container" style="background-image: url('http://localhost:4000/post-images/gridea-github.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
-
-          <div class="pagination-container">
+    
+        <div class="pagination-container">
   
   
 </div>
 
-        </div>
+    
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://erhuChenChen.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
-</script>
-
-
-
-
-
-
   </body>
 </html>
