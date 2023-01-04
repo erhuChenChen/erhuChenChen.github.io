@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://erhuChenChen.github.io</id>
     <title>二胡沉沉</title>
-    <updated>2023-01-04T07:59:26.419Z</updated>
+    <updated>2023-01-04T10:15:25.719Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://erhuChenChen.github.io"/>
     <link rel="self" href="https://erhuChenChen.github.io/atom.xml"/>
@@ -10,6 +10,58 @@
     <logo>https://erhuChenChen.github.io/images/avatar.png</logo>
     <icon>https://erhuChenChen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, 二胡沉沉</rights>
+    <entry>
+        <title type="html"><![CDATA[给 Gridea+github 博客添加 gitalk 评论插件]]></title>
+        <id>https://erhuChenChen.github.io/post/gei-grideagithub-bo-ke-tian-jia-gitalk-ping-lun-cha-jian/</id>
+        <link href="https://erhuChenChen.github.io/post/gei-grideagithub-bo-ke-tian-jia-gitalk-ping-lun-cha-jian/">
+        </link>
+        <updated>2023-01-04T08:59:42.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>新年快乐！</p>
+</blockquote>
+<h2 id="概述">概述</h2>
+<p><strong>Gitalk</strong> 是一个基于 GitHub Issue 和 Preact 开发的评论插件。<br>
+功能：</p>
+<ul>
+<li>使用 GitHub 登录</li>
+<li>支持多语言（en, zh-CN, zh-TW, es-ES, fr, ru）</li>
+<li>支持个人或组织</li>
+<li>无干扰模式（设置 distractionFreeMode 为 true 开启）</li>
+<li>快捷键提交评论 （cmd|ctrl + enter）</li>
+</ul>
+<p>鉴于博客由 github 存储仓库，用 gitalk 会方便一些。</p>
+<h2 id="配置-github-创建-gitalk-开放授权应用">配置 github —— 创建 gitalk 开放授权应用</h2>
+<ol>
+<li>登录<a href="https://github.com/">Github</a>网站，鼠标点击头像，点击下拉菜单的【settings】。</li>
+<li>跳转新页面往下滑，点击左下角栏目中的开发者设置【Developer settings】。</li>
+<li>跳转新页面，点击左侧栏的开放授权应用【OAuth Apps】，点击右侧新建【New OAuth App】。</li>
+<li>如图操作，最后点击绿色按钮注册应用。<br>
+<img src="https://erhuChenChen.github.io/post-images/1672825192849.png" alt="" loading="lazy"></li>
+<li>跳转新页面，点击右侧白色按钮【Generate a new client secret】生成一个新密码。<br>
+<img src="https://erhuChenChen.github.io/post-images/1672825198917.png" alt="" loading="lazy"></li>
+<li>保存Client ID和Client Secret。</li>
+</ol>
+<h2 id="配置gridea">配置Gridea</h2>
+<ol>
+<li>打开Gridea客户端，按下图操作。<br>
+<img src="https://erhuChenChen.github.io/post-images/1672825714018.png" alt="" loading="lazy"></li>
+<li>保存之后进行远程链接和同步操作，打开实际网站，由于gitalk需要发布者进行初始化，在评论栏目点击进行登录即可。<br>
+<img src="https://erhuChenChen.github.io/post-images/1672826158686.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="遇到的问题">遇到的问题</h2>
+<ol>
+<li>博客评论区出错，【未找到相关的 Issues 进行评论请联系 @_____ 初始化创建】<br>
+<strong>解决办法：</strong><br>
+一，可能站点仓库Settings中未打开issue，打开即可。<br>
+<img src="https://erhuChenChen.github.io/post-images/1672826775606.png" alt="" loading="lazy"><br>
+二，可能【New OAuth App】中主页链接和授权回调链接设置错误，重新设置。
+<blockquote>
+<p>比如我把https://erhuChenChen.github.io设置成了https://github.com/erhuChenChen/erhuChenChen.github.io，导致错误。</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[从零开始Gridea+Github搭建个人博客]]></title>
         <id>https://erhuChenChen.github.io/post/Blogger-gridea-github/</id>
