@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://erhuChenChen.github.io</id>
     <title>二胡沉沉</title>
-    <updated>2024-09-29T09:37:43.998Z</updated>
+    <updated>2024-09-29T10:05:00.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://erhuChenChen.github.io"/>
     <link rel="self" href="https://erhuChenChen.github.io/atom.xml"/>
@@ -151,7 +151,15 @@
 <li>同步失败<br>
 <img src="https://erhuChenChen.github.io/post-images/1624347641673.png" alt="" loading="lazy"><br>
 解决方法：<br>
-<a href="https://blog.gd1214b.icu/post/F2_C5EVQh/">解决Gridea同步失败的问题</a></li>
+通过桌面GitHub Desktop将Gridea文件夹上传到GitHub对应仓库中。
+<ol>
+<li>安装对应电脑版本的GitHub Desktop，并登录。</li>
+<li>克隆对应仓库到本地站点源文件路径下的output空文件夹。</li>
+<li>在Gridea程序中点击同步（不需要管是否同步成功）。</li>
+<li>回到GitHub Desktop，填写对应summary，点击submit提交。</li>
+<li>点击push origin进行上传。</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
