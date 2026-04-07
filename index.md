@@ -16,7 +16,7 @@ title: 我的博客
   body.dark a{color:#58a6ff}
 </style>
 
-<button class="theme-toggle" id="toggle">🌙</button>
+<button class="theme-toggle" id="toggle">☀️</button>
 
 <details>
   <summary>🔍 搜索文章</summary>
@@ -35,24 +35,32 @@ title: 我的博客
 </ul>
 
 <script>
-document.getElementById('search')?.addEventListener('keyup', function() {
-  let keyword = this.value.toLowerCase();
-  document.querySelectorAll('#posts li').forEach(item => {
-    item.style.display = item.getAttribute('data-title').includes(keyword) ? '' : 'none';
+  // 搜索功能
+  document.getElementById('search')?.addEventListener('keyup', function() {
+    let keyword = this.value.toLowerCase();
+    document.querySelectorAll('#posts li').forEach(item => {
+      item.style.display = item.getAttribute('data-title').includes(keyword) ? '' : 'none';
+    });
   });
-});
 
-function toggleTheme() {
-  document.body.classList.toggle('dark');
-  let btn = document.getElementById('toggle');
-  let isDark = document.body.classList.contains('dark');
-  btn.innerHTML = isDark ? '☀️' : '🌙';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
+  // 夜间模式切换
+  const toggleBtn = document.getElementById('toggle');
+  
+  function setTheme(isDark) {
+    if (isDark) {
+      document.body.classList.add('dark');
+      toggleBtn.innerHTML = '🌙';  // 黑背景 → 月亮
+    } else {
+      document.body.classList.remove('dark');
+      toggleBtn.innerHTML = '☀️';  // 白背景 → 太阳
+    }
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
 
-let saved = localStorage.getItem('theme');
-if (saved === 'dark') {
-  document.body.classList.add('dark');
-  document.getElementById('toggle').innerHTML = '☀️';
-}
+  toggleBtn.addEventListener('click', function() {
+    setTheme(!document.body.classList.contains('dark'));
+  });
+
+  const savedTheme = localStorage.getItem('theme');
+  setTheme(savedTheme === 'dark');
 </script>
