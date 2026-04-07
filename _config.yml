@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: 我的博客
 description: 整这玩意好累
+github_button: false
