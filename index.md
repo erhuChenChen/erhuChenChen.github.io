@@ -7,6 +7,9 @@ title: 我的博客
   :root{--bg:#fff;--text:#333;--code:#f5f5f5}
   body.dark{--bg:#1a1a1a;--text:#e0e0e0;--code:#2d2d2d}
   body{background:var(--bg);color:var(--text);transition:0.3s}
+
+h1{color:var(--text)}
+
   .theme-toggle{position:fixed;top:20px;right:20px;background:transparent;border:none;font-size:24px;cursor:pointer}
   details{margin-bottom:20px}
   #search{width:100%;padding:8px;background:var(--bg);color:var(--text);border:1px solid #ccc}
