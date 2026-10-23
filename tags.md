@@ -5,11 +5,38 @@ permalink: /tags/
 ---
 
 {% assign tags = site.tags | sort %}
+
+{# 全部标签汇总栏，一直显示在这里 #}
+<span style="font-style:italic;">
 {% for tag in tags %}
-  <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+<a href="javascript:showTag('{{ tag[0] | slugify }}')" style="margin-right:12px;">{{ tag[0] }} {{ tag[1].size }}</a>
+{% endfor %}
+<a href="javascript:showAll()" style="margin-right:12px;">查看全部</a>
+</span>
+<hr>
+
+{% for tag in tags %}
+<div class="tag-group" id="tag-{{ tag[0] | slugify }}">
+  <h3 style="font-style:italic;">{{ tag[0] }} {{ tag[1].size }}</h3>
   <ul>
     {% for post in tag[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
     {% endfor %}
   </ul>
+</div>
 {% endfor %}
+
+<script>
+function showTag(id){
+  document.querySelectorAll('.tag-group').forEach(el=>el.style.display='none');
+  document.getElementById('tag-'+id).style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function showAll(){
+  document.querySelectorAll('.tag-group').forEach(el=>el.style.display='block');
+}
+document.addEventListener('DOMContentLoaded', function(){
+  const hash = window.location.hash.replace('#','');
+  if(hash) showTag(hash);
+})
+</script>
