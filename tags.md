@@ -14,12 +14,7 @@ permalink: /tags/
   cursor: pointer;
 }
 .tag-btn.active {
-  color: #000 !important;
-}
-@media (prefers-color-scheme: dark) {
-  .tag-btn.active {
-    color: #ffffff !important;
-  }
+  color: #fff !important;
 }
 </style>
 
