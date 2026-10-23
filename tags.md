@@ -14,7 +14,14 @@ permalink: /tags/
   cursor: pointer;
 }
 .tag-btn.active {
-  color: #fff !important;
+  color: #000 !important;
+}
+/* 深色模式：body.dark */
+body.dark .tag-btn {
+  color: #66aaff;
+}
+body.dark .tag-btn.active {
+  color: #ffffff !important;
 }
 </style>
 
