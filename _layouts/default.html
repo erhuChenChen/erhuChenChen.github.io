@@ -58,22 +58,37 @@ h1, h2, h3, h4, h5, h6 {
       
       /* 夜间模式切换按钮 */
       .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1000;
-  padding: 8px;
-  color: var(--text-color);
-  transition: all 0.2s;
-}
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000;
+        padding: 8px;
+        color: var(--text-color);
+        transition: all 0.2s;
+      }
       
       .theme-toggle:hover {
         opacity: 0.8;
         transform: scale(1.02);
+      }
+      /* tag标签样式 */
+      .post-tags {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #f0f0f0;
+        font-size: 14px;
+        color: #999;
+      }
+      .post-tags a {
+        color: #2a7ae2;
+        text-decoration: none;
+      }
+      .post-tags a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
