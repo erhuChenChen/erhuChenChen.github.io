@@ -16,6 +16,11 @@ permalink: /tags/
 .tag-btn.active {
   color: #000 !important;
 }
+@media (prefers-color-scheme: dark) {
+  .tag-btn.active {
+    color: #ffffff !important;
+  }
+}
 </style>
 
 {% assign tags = site.tags | sort %}
