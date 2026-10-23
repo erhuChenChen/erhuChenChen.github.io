@@ -5,7 +5,7 @@ permalink: /tags/
 ---
 
 {% assign tags = site.tags | sort %}
-<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:1.2em;margin:1em 0;">
+<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:1em;margin:1em 0;">
 {% for tag in tags %}
 <a class="tag-btn" data-tag="{{ tag[0] }}" href="javascript:void(0);" style="font-style:italic;">{{ tag[0] }} {{ tag[1].size }}</a>
 {% endfor %}
