@@ -5,10 +5,12 @@ permalink: /tags/
 ---
 
 {% assign tags = site.tags | sort %}
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
 {% for tag in tags %}
-<a href="javascript:showTag('{{ tag[0] | slugify }}')" style="margin-right:12px;font-style:italic;">{{ tag[0] }} {{ tag[1].size }}</a>
+<a href="javascript:showTag('{{ tag[0] | slugify }}')" style="font-style:italic;">{{ tag[0] }} {{ tag[1].size }}</a>
 {% endfor %}
-<a href="javascript:showAll()" style="margin-right:12px;font-style:italic;">查看全部</a>
+<a href="javascript:showAll()" style="font-style:italic;">查看全部</a>
+</div>
 
 <hr>
 
