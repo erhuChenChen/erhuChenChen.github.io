@@ -111,7 +111,19 @@ h1, h2, h3, h4, h5, h6 {
       <section>
 
       {{ content }}
-
+        
+      <!-- tag标签 -->
+      {% if page.tags.size > 0 %}
+      <div class="post-tags">
+        Tags：
+        {% for tag in page.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+            <a href="/tags/#{{ tag_name | slugify }}">{{ tag_name }}</a>
+          {% if forloop.last == false %}、{% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+        
       </section>
       <footer>
         {% if site.github.is_project_page %}
