@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
       <!-- tag标签 -->
       {% if page.tags.size > 0 %}
       <div class="post-tags">
-        Tags：
+       tags：
         {% for tag in page.tags %}
           {% capture tag_name %}{{ tag }}{% endcapture %}
             <a href="/tags/#{{ tag_name | slugify }}">{{ tag_name }}</a>
