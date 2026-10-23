@@ -11,9 +11,10 @@ permalink: /tags/
   font-style: italic;
   text-decoration: none;
   color: #0066cc;
+  cursor: pointer;
 }
 .tag-btn.active {
-  color: #000000 !important;
+  color: #000 !important;
 }
 </style>
 
@@ -38,38 +39,37 @@ permalink: /tags/
 {% endfor %}
 
 <script>
-// 筛选 + 切换active高亮class
 function switchTag(targetName) {
+  console.log("读到的标签：", targetName);
   const blocks = document.querySelectorAll('.tag-block');
   blocks.forEach(block => {
     block.style.display = (targetName === 'all' || block.dataset.group === targetName) ? 'block' : 'none';
   })
 
-  // 清除全部激活状态
   document.querySelectorAll('.tag-btn').forEach(btn => {
     btn.classList.remove('active');
   })
-  // 给匹配的加上active
   const activeBtn = document.querySelector(`.tag-btn[data-tag="${targetName}"]`);
   if(activeBtn){
     activeBtn.classList.add('active');
+    console.log("找到了匹配按钮，加上高亮");
+  }else{
+    console.log("⚠️ 没有找到匹配的按钮");
   }
 }
 
-// 读取hash
 function getHashTag() {
   const h = window.location.hash.slice(1);
-  return h ? decodeURIComponent(h) : 'all';
+  const res = h ? decodeURIComponent(h) : 'all';
+  return res;
 }
 
-// 点击事件
 document.querySelectorAll('.tag-btn').forEach(btn => {
   btn.onclick = () => {
     switchTag(btn.dataset.tag);
   }
 })
 
-// 初始化
 function init() {
   switchTag(getHashTag());
 }
