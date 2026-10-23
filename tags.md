@@ -4,13 +4,12 @@ title: 标签
 permalink: /tags/
 ---
 
-<span style="font-style:italic;">
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
-<a href="javascript:showTag('{{ tag[0] | slugify }}')" style="margin-right:12px;">{{ tag[0] }} {{ tag[1].size }}</a>
+<a href="javascript:showTag('{{ tag[0] | slugify }}')" style="margin-right:12px;font-style:italic;">{{ tag[0] }} {{ tag[1].size }}</a>
 {% endfor %}
-<a href="javascript:showAll()" style="margin-right:12px;">查看全部</a>
-</span>
+<a href="javascript:showAll()" style="margin-right:12px;font-style:italic;">查看全部</a>
+
 <hr>
 
 {% for tag in tags %}
