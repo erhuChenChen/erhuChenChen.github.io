@@ -6,12 +6,23 @@ permalink: /tags/
 
 # 标签
 
+<style>
+.tag-btn {
+  font-style: italic;
+  text-decoration: none;
+  color: #0066cc;
+}
+.tag-btn.active {
+  color: #000000 !important;
+}
+</style>
+
 {% assign tags = site.tags | sort %}
 <div style="display:flex;flex-wrap:wrap;gap:12px;font-size:0.85em;margin:1em 0;">
 {% for tag in tags %}
-<a class="tag-btn" data-tag="{{ tag[0] }}" href="javascript:void(0);" style="font-style:italic;text-decoration:none;color:#0066cc;">{{ tag[0] }} {{ tag[1].size }}</a>
+<a class="tag-btn" data-tag="{{ tag[0] }}" href="javascript:void(0);">{{ tag[0] }} {{ tag[1].size }}</a>
 {% endfor %}
-<a class="tag-btn" data-tag="all" href="javascript:void(0);" style="font-style:italic;text-decoration:none;color:#0066cc;">查看全部</a>
+<a class="tag-btn" data-tag="all" href="javascript:void(0);">查看全部</a>
 </div>
 <hr>
 
@@ -27,47 +38,42 @@ permalink: /tags/
 {% endfor %}
 
 <script>
-// 筛选 + 更新标签高亮
+// 筛选 + 切换active高亮class
 function switchTag(targetName) {
   const blocks = document.querySelectorAll('.tag-block');
   blocks.forEach(block => {
-    if (targetName === 'all' || block.dataset.group === targetName) {
-      block.style.display = 'block';
-    } else {
-      block.style.display = 'none';
-    }
+    block.style.display = (targetName === 'all' || block.dataset.group === targetName) ? 'block' : 'none';
   })
 
-  // 全部标签重置为蓝色
+  // 清除全部激活状态
   document.querySelectorAll('.tag-btn').forEach(btn => {
-    btn.style.color = '#0066cc';
+    btn.classList.remove('active');
   })
-  // 选中项变黑
-  document.querySelectorAll(`.tag-btn[data-tag="${targetName}"]`).forEach(btn => {
-    btn.style.color = '#000000';
-  })
+  // 给匹配的加上active
+  const activeBtn = document.querySelector(`.tag-btn[data-tag="${targetName}"]`);
+  if(activeBtn){
+    activeBtn.classList.add('active');
+  }
 }
 
-// 从地址栏hash读取标签
+// 读取hash
 function getHashTag() {
   const h = window.location.hash.slice(1);
   return h ? decodeURIComponent(h) : 'all';
 }
 
-// 绑定顶部标签点击
+// 点击事件
 document.querySelectorAll('.tag-btn').forEach(btn => {
   btn.onclick = () => {
     switchTag(btn.dataset.tag);
   }
 })
 
-// 页面加载完执行一次
+// 初始化
 function init() {
   switchTag(getHashTag());
 }
 init();
-
-// 监听hash变化
 window.addEventListener('hashchange', () => {
   switchTag(getHashTag());
 })
