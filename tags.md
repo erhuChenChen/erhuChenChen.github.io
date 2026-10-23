@@ -25,30 +25,39 @@ permalink: /tags/
 {% endfor %}
 
 <script>
-const tagBtns = document.querySelectorAll('.tag-btn');
-const tagBlocks = document.querySelectorAll('.tag-block');
-
-function switchTag(targetName){
-  tagBlocks.forEach(block=>{
-    if(targetName === 'all' || block.dataset.group === targetName){
+// 筛选函数
+function switchTag(targetName) {
+  const blocks = document.querySelectorAll('.tag-block');
+  blocks.forEach(block => {
+    if (targetName === 'all' || block.dataset.group === targetName) {
       block.style.display = 'block';
-    }else{
+    } else {
       block.style.display = 'none';
     }
   })
 }
 
-tagBtns.forEach(btn=>{
-  btn.onclick = ()=>{
+// 从地址栏hash读取标签
+function getHashTag() {
+  const h = window.location.hash.slice(1);
+  return h ? decodeURIComponent(h) : 'all';
+}
+
+// 绑定顶部标签点击
+document.querySelectorAll('.tag-btn').forEach(btn => {
+  btn.onclick = () => {
     switchTag(btn.dataset.tag);
   }
 })
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  const rawHash = window.location.hash.slice(1);
-  if(rawHash){
-    const hash = decodeURIComponent(rawHash);
-    switchTag(hash);
-  }
+// 页面加载完执行一次
+function init() {
+  switchTag(getHashTag());
+}
+init();
+
+// 监听hash变化
+window.addEventListener('hashchange', () => {
+  switchTag(getHashTag());
 })
 </script>
