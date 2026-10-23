@@ -4,12 +4,14 @@ title: 标签
 permalink: /tags/
 ---
 
+# 标签
+
 {% assign tags = site.tags | sort %}
-<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:1em;margin:1em 0;">
+<div style="display:flex;flex-wrap:wrap;gap:12px;font-size:0.85em;margin:1em 0;">
 {% for tag in tags %}
-<a class="tag-btn" data-tag="{{ tag[0] }}" href="javascript:void(0);" style="font-style:italic;">{{ tag[0] }} {{ tag[1].size }}</a>
+<a class="tag-btn" data-tag="{{ tag[0] }}" href="javascript:void(0);" style="font-style:italic;text-decoration:none;color:#0066cc;">{{ tag[0] }} {{ tag[1].size }}</a>
 {% endfor %}
-<a class="tag-btn" data-tag="all" href="javascript:void(0);" style="font-style:italic;">查看全部</a>
+<a class="tag-btn" data-tag="all" href="javascript:void(0);" style="font-style:italic;text-decoration:none;color:#0066cc;">查看全部</a>
 </div>
 <hr>
 
@@ -25,7 +27,7 @@ permalink: /tags/
 {% endfor %}
 
 <script>
-// 筛选函数
+// 筛选 + 更新标签高亮
 function switchTag(targetName) {
   const blocks = document.querySelectorAll('.tag-block');
   blocks.forEach(block => {
@@ -34,6 +36,15 @@ function switchTag(targetName) {
     } else {
       block.style.display = 'none';
     }
+  })
+
+  // 全部标签重置为蓝色
+  document.querySelectorAll('.tag-btn').forEach(btn => {
+    btn.style.color = '#0066cc';
+  })
+  // 选中项变黑
+  document.querySelectorAll(`.tag-btn[data-tag="${targetName}"]`).forEach(btn => {
+    btn.style.color = '#000000';
   })
 }
 
